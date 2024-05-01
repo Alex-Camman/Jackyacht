@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Yacht Experience</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Additional styles for specific elements */
+    /* Background image section */
+    #home {
+      background-image: url('https://i.ibb.co/bFVWsqg/pexels-skyler-ewing-266953-12742737.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    < !DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport"content="width=device-width, initial-scale=1.0"><title>Yacht Experience</title><link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"><link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"><link rel="stylesheet"href="style.css"><style>
+
+    /* Additional styles for specific elements */
+    /* Background image section */
+    #home {
+      background-image: url('https://i.ibb.co/bFVWsqg/pexels-skyler-ewing-266953-12742737.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+
+      /* Foreground SVG */
+      #yacht-silhouettes {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        /* Ensure SVG is behind content */
+      }
+
+      /* Parallax content */
+      .parallax-content {
+        color: #fff;
+        text-align: center;
+        z-index: 2;
+        position: relative;
+      }
+
+      /* Button styles */
+      .btn-book-now {
+        display: inline-block;
+        background-color: #FFC107;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+
+      .btn-book-now:hover {
+        background-color: #FFA000;
+      }
+
+      /* Other styles (existing styles from style.css can go here) */
+  </style>
+
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="container">
+
+      <nav class="nav">
+
+        <ul>
+
+          <li><a href="#home">Home</a></li>
+
+          <li><a href="#features">Features</a></li>
+
+          <li><a href="#yachts">Yachts</a></li>
+
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <section id="home" class="parallax">
+
+    <div id="yacht-silhouettes">
+
+      <a href='https://svgshare.com/s/15dn'><img src='https://svgshare.com/i/15dn.svg' alt='Yacht Silhouette'></a>
+
+    </div>
+
+    <div class="parallax-content">
+
+      <h2>Explore Our Yachts</h2>
+
+      <p>Discover a fleet of luxury yachts waiting for your adventure</p>
+
+      <a href="#" class="btn-book-now">Book Now</a>
+
+    </div>
+
+  </section>
+
+  <section id="features" class="content">
+
+    <div class="container">
+
+      <h2>Features</h2>
+
+      <div class="feature">
+
+        <h3>Exotic Destinations</h3>
+
+        <p>Explore the world's most breathtaking locations</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="yachts" class="content">
+
+    <div class="container">
+
+      <h2>Our Yachts</h2>
+
+      <p>Experience luxury and comfort on the water</p>
+
+    </div>
+
+  </section>
+
+  <section id="contact" class="content">
+
+    <div class="container">
+
+      <h2>Contact Us</h2>
+
+      <p>Email: info@yachtexperience.com</p>
+
+      <p>Phone: +1 (123) 456-7890</p>
+
+    </div>
+
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Smooth scrolling
+    $(document).ready(function() {
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function() {
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
